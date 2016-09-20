@@ -36,6 +36,6 @@ node {
         credentialsId: 'dcos-token',
         filename: 'marathon.json',
         appId: 'nginx-paruff',
-        docker: "mesosphere/vny:${gitCommit()}".toString()
+        docker: "paruff/vny:${gitCommit()}".toString()
     )
 }
