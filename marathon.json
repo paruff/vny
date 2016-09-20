@@ -5,7 +5,7 @@
   "instances": 1,
   "container": {
     "docker": {
-      "image": "mesosphere/vny:latest",
+      "image": "paruff/vny:latest",
       "portMappings": [
         {
           "containerPort": 80,
