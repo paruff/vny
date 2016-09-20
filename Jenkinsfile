@@ -27,7 +27,6 @@ node {
         sh "docker login -u ${env.DOCKERHUB_USERNAME} -p ${env.DOCKERHUB_PASSWORD} -e phil.ruff@gmail.com"
         sh "docker push paruff/vny:${gitCommit()}"
     }
-}
  // Deploy
     stage 'Deploy'
 
@@ -36,7 +35,7 @@ node {
         forceUpdate: false,
         credentialsId: 'dcos-token',
         filename: 'marathon.json',
-        appId: 'nginx-mesosphere',
+        appId: 'nginx-paruff',
         docker: "mesosphere/vny:${gitCommit()}".toString()
     )
-
+}
